@@ -12,11 +12,11 @@ CLASS_NAMES = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog',
 model = models.load_model(MODEL_FILE)
 
 # Load the images and transform into normalized numpy arrays (3, 32, 32, 3)
-charlies = np.asarray([np.asarray(Image.open('charlie.png'))/255.0,
-                        np.asarray(Image.open('charlie_2.png'))/255.0,
-                        np.asarray(Image.open('charlie_3.png'))/255.0,
-                        np.asarray(Image.open('cat.png'))/255.0,
-                        np.asarray(Image.open('cat_2.png'))/255.0])
+charlies = np.asarray([np.asarray(Image.open(r'.\imgs\charlie.png'))/255.0,
+                        np.asarray(Image.open(r'.\imgs\charlie_2.png'))/255.0,
+                        np.asarray(Image.open(r'.\imgs\charlie_3.png'))/255.0,
+                        np.asarray(Image.open(r'.\imgs\cat.png'))/255.0,
+                        np.asarray(Image.open(r'.\imgs\cat_2.png'))/255.0])
 
 # Predict the classes
 predictions = model.predict(charlies)
